@@ -4,7 +4,11 @@ import './NamesList.css';
 const NamesList = (props) => {
     return ( 
         <div>
-            <ol className="nameList">{props.nameList}</ol>
+            <ol>
+                {props.displayNameList.map(names => (
+                    <li key={names}>{names}</li>
+                ))}
+            </ol>
         </div>
      );
 }

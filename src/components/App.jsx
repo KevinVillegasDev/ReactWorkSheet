@@ -9,9 +9,11 @@ class App extends Component {
         this.state = {
             firstName: 'Reggie',
             lastName: 'White',
+            nameIndex: 0,
             names: ['Mike', 'Nevin', 'Aaron', 'Tory', 'Kelly']
         };
     }
+
 
     render(){
         return(
@@ -20,9 +22,10 @@ class App extends Component {
                     <DisplayName firstName={this.state.firstName} lastName={this.state.lastName}/>
                 </h1>
                 <ol>
-                    <NamesList nameList={this.state.names}/>
+                    <NamesList displayNameList={this.state.names}/>
                 </ol>
             </div>
+
         )
     }
 }
