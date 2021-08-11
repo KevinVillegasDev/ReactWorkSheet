@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css'
 import DisplayName from './DisplayName/DisplayName';
 import NamesList from './NamesList/NamesList';
+import AlertUser from './AlertUser/AlertUser';
 
 class App extends Component {
     constructor(props){
@@ -14,6 +15,11 @@ class App extends Component {
         };
     }
 
+    AlertTheUser = () => {
+        return(
+            alert("devCodeCamp"
+            ));
+    }
 
     render(){
         return(
@@ -24,6 +30,7 @@ class App extends Component {
                 <ol>
                     <NamesList displayNameList={this.state.names}/>
                 </ol>
+                <AlertUser alert={this.AlertTheUser}/>
             </div>
 
         )
